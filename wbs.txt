@@ -1,0 +1,25 @@
+1) Client - Mouse position capturing each 500ms(3 days)
+    - Creating separate module
+    - Implementation of reading mouse coords callee function
+    - Implementation of caller function running in different thread
+    - Thread-safe changing of a shared object (object of struct containing mouse coords and keycode)
+
+2) Client - Mouse clicks collection (2 days)
+    - Creating separate module
+    - Implementation of reading mouse events callee function (keycodes of mouse buttons)
+    - Implementation of caller function running in different thread
+    - Thread-safe changing of a shared object(wheher using atomic or mutex)
+
+3) Client - Sending activities to the server (2 days)
+    - Creating separate module
+    - Declaration of a shared object containing coords and keycode of mouse button
+    - Definition of variabes with correspondent address and port of server and other helpful stuff
+    - Configuring socket to send data to server
+    - Starting threads invoking functions for reading mouse activities simultaneously
+    - Tracking mouse activities. Prepare and thread-safely copy data and send if there is any changes.
+
+4) Server - Saving activities (2 days)
+    - Сreating separate module
+    - Configuring socket whether for listening or just as udp
+    - Receiving sent object by client
+    - Converting received object to required string format and saving it in log file
